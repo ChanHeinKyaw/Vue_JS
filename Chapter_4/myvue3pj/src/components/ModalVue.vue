@@ -1,5 +1,5 @@
 <template>
-  <div class="backdrop">
+  <div class="backdrop" @click.self="closeModal">
     <div class="modal" :class="{success: theme==='success',danger: theme==='danger'}">
       <h1>{{ header }}</h1>
       <p>{{ content }}</p>
@@ -10,7 +10,12 @@
 <script>
 export default {
   props: ['header','content','theme'],
-  name: "ModalVue"
+  name: "ModalVue",
+  methods: {
+    closeModal(){
+      this.$emit("close");
+    }
+  }
 }
 </script>
 
