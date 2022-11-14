@@ -7,3 +7,19 @@ props က parent to child ကို data လှမ်း ပို့ချင�
 props တွေက ကြိုက်သလောက် data တွေလှမ်းပို့လို့ရတယ်
 
 ============================================
+emit က parent component ထဲမှာ ရှိတဲ့ data ကို child component ကနေ လှမ်း ပြင်ချင်ရင် 
+event emit ကို သုံးပေးရတယ်။
+
+============================================
+Event Modifier
+@click.left   => left click
+@click.right  => right click
+@click.shift  => shift + left click
+@click.alt    => alt + left click
+
+============================================
+parent element ကို click ရင် child element တွေကို 
+effect မဖြစ်စေချင်ရင် 
+click function မှာ self ကို သုံးပြီး ကာထား လို့ရတယ်။
+
+============================================
