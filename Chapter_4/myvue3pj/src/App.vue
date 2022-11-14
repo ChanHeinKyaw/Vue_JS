@@ -6,7 +6,14 @@
       <button @click="changeName">Change</button>
     </div>
     <div v-if="showModal">
-      <ModalVue header="Login Success" content="welcome to chan hein kyaw" theme="success" @close="showModal=false"/>
+      <ModalVue header="Login Success" content="welcome to chan hein kyaw" theme="success" @close="showModal=false">
+        <h1>Login Success</h1>
+        <p>welcome user chan hein kyaw</p>
+        <template v-slot:links>
+          <a href="">Sing In</a>
+          <a href="">Sing Up</a>
+        </template>
+      </ModalVue>
     </div>
     
     <button @click="showModal=true">Open Modal</button>
