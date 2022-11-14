@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
+    <p>{{ title }}</p>
     <input type="text" ref="name">
     <button @click="changeName">Change</button>
     <ModalVue></ModalVue>
@@ -27,6 +27,8 @@ import ModalVue from "./components/ModalVue.vue"
   }
 </script>
 
-<style>
-
+<style scoped>
+  p{
+    color:blue;
+  }
 </style>
