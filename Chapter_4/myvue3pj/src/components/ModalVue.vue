@@ -1,14 +1,15 @@
 <template>
   <div class="backdrop">
-    <div class="modal">
-      <h1>Modal Title</h1>
-      <p>Modal Content</p>
+    <div class="modal" :class="{success: theme==='success',danger: theme==='danger'}">
+      <h1>{{ header }}</h1>
+      <p>{{ content }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['header','content','theme'],
   name: "ModalVue"
 }
 </script>
@@ -28,5 +29,15 @@ export default {
     margin: 100px auto;
     background-color: white;
     border-radius: 10px;
+  }
+  
+  .success{
+    background-color: green;
+    color: white;
+  }
+
+  .danger{
+    background-color: #ff0090;
+    color: white;
   }
 </style>
