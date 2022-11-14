@@ -1,8 +1,10 @@
 <template>
   <div class="backdrop" @click.self="closeModal">
     <div class="modal" :class="{success: theme==='success',danger: theme==='danger'}">
-      <h1>{{ header }}</h1>
-      <p>{{ content }}</p>
+      <slot>
+        default
+      </slot>
+      <slot name="links"/>
     </div>
   </div>
 </template>
