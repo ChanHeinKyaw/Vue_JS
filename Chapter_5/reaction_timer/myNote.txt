@@ -30,4 +30,18 @@ beforeUnmount က mount လုပ်ပြီးသား Component တစ်ခ
 unmounted
 
 unmounted က mount လုပ်ပြီးသား Component တစ်ခု ဖျက် ချပြီးတဲ့ အခြေအနေမှာ အလုပ်လုပ်တယ်
+=========================================
+setInterval
+
+    this.timer = setInterval(() => {
+        this.score += 50;
+      }, 50);
+
+    clearInterval(this.timer);
+
+setInterval က 50 ကြာသွားရင် ရပ် မနေပဲ 50 ကြာ တခါ result ကို ထူတ်ပေးတယ် 
+တကယ် လို့ setInterval ကို ရပ်ချင်ရင် variable တစ်ခု ထဲမှာ သိမ်းပြီး တော့ 
+clearInterval နဲ့ ပြန် ခေါပေးမှ setInterval ကို ရပ်လို့ရတယ်။
+
+
 
