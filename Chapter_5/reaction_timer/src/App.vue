@@ -1,11 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <h1>How fast can you catch me?</h1>
+  <button @click="start" :disabled="isPlaying">Play</button>
+  <div v-if="isPlaying">
+    <BlockVue :delay="delay" />
+  </div>
 </template>
 
 <script>
+import BlockVue from "./components/BlockVue.vue";
 export default {
   name: "App",
-  components: {},
+  data() {
+    return {
+      isPlaying: false,
+      delay: null,
+    };
+  },
+  components: { BlockVue },
+  methods: {
+    start() {
+      this.isPlaying = true;
+      this.delay = 2000 + Math.random() * 5000;
+    },
+  },
 };
 </script>
 
