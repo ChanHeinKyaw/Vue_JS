@@ -1,11 +1,11 @@
 <template>
   <div class="backdrop" @click.self="closeModal">
-    <div class="modal" :class="{success: theme==='success',danger: theme==='danger'}">
+    <teleport to=".modalBox" class="modal" :class="{success: theme==='success',danger: theme==='danger'}">
       <slot>
         default
       </slot>
       <slot name="links"/>
-    </div>
+    </teleport>
   </div>
 </template>
 
