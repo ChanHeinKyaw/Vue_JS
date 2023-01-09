@@ -1,0 +1,5 @@
+router-link And a tag
+=======================
+router-link က page refresh မ ဖြစ်ဘူး။
+a tag က page refresh ဖြစ်တယ်။
+=======================

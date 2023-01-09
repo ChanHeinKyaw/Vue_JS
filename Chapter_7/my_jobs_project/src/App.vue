@@ -1,9 +1,11 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :to="{ name: 'home' }">Home</router-link> |
+    <router-link :to="{ name: 'about' }">About</router-link> |
+    <router-link :to="{ name: 'jobs' }">Job</router-link> |
+    <router-link :to="{ name: 'jobdetail' }">JobDetail</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
