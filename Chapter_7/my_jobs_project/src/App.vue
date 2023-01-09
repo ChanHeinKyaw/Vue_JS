@@ -2,8 +2,7 @@
   <nav>
     <router-link :to="{ name: 'home' }">Home</router-link> |
     <router-link :to="{ name: 'about' }">About</router-link> |
-    <router-link :to="{ name: 'jobs' }">Job</router-link> |
-    <router-link :to="{ name: 'jobdetail' }">JobDetail</router-link>
+    <router-link :to="{ name: 'jobs' }">Job</router-link>
   </nav>
   <router-view />
 </template>

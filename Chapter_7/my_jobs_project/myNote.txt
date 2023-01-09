@@ -3,3 +3,5 @@ router-link And a tag
 router-link က page refresh မ ဖြစ်ဘူး။
 a tag က page refresh ဖြစ်တယ်။
 =======================
+param တွေကို props နဲ့ လှမ်းယူခြင်ရင် route မှာ props ကို true သွားပေးဖို့ လိုတယ်
+=======================
