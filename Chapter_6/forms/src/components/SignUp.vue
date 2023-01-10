@@ -13,6 +13,12 @@
     </select>
 
     <div>
+      <label for="">Skills</label>
+      <input type="text" @keyup="addSkill" v-model="skill">
+    </div>
+    {{ skills }}
+
+    <div>
       <input type="checkbox" v-model="accept">
       <label for="">accept terms and condition</label>
     </div>
@@ -57,6 +63,16 @@ export default {
       role: "",
       accept: false,
       names: [],
+      skills: [],
+      skill: "",
+    }
+  },
+  methods:{
+    addSkill(e){
+      if(e.key === ","){
+        this.skills.push(this.skill);
+        this.skill = "";
+      }
     }
   }
 }
