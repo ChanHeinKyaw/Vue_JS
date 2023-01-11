@@ -5,3 +5,6 @@ a tag က page refresh ဖြစ်တယ်။
 =======================
 param တွေကို props နဲ့ လှမ်းယူခြင်ရင် route မှာ props ကို true သွားပေးဖို့ လိုတယ်
 =======================
+npm install -g json-server  // Install Json server
+json-server --watch database/db.json    // watch json file
+=======================
