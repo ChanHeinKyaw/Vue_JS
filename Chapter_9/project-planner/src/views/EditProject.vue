@@ -1,6 +1,6 @@
 <template>
     <h1>Edit Project</h1>
-    <form @submit.prevent="addProject">
+    <form @submit.prevent="updateProject">
         <label>Project Title</label>
         <input type="text" v-model="title" />
         <label>Project Detail</label>
@@ -16,6 +16,26 @@
             return {
                 title: "",
                 detail: "",
+            }
+        },
+        methods: {
+            updateProject(){
+                fetch("http://localhost:3000/projects/" + this.id,
+                {
+                    method: "PATCH",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        title: this.title,
+                        detail: this.detail,
+                    })
+                }).then(() => {
+                    this.$router.push("/");
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
             }
         },
         mounted(){
