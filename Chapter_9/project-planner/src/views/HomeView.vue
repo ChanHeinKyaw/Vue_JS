@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>Home</h1>
+    <FilterNav @filterValue="current=$event" :current="current"></FilterNav>
     <div v-for="project in projects" :key="project.id">
       <SingleProject
         :project="project"
@@ -12,12 +13,14 @@
 </template>
 
 <script>
+import FilterNav from '../components/FilterNav'
 import SingleProject from "../components/SingleProject";
 export default {
   name: "HomeView",
   data() {
     return {
       projects: [],
+      current: "all",
     };
   },
   methods: {
@@ -35,6 +38,7 @@ export default {
     },
   },
   components: {
+    FilterNav,
     SingleProject,
   },
   mounted() {
