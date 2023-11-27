@@ -16,7 +16,12 @@
       <label for="">Skills</label>
       <input type="text" @keyup="addSkill" v-model="skill">
     </div>
-    {{ skills }}
+    <div v-for="skill in skills" :key="skill">
+      <p>
+        {{ skill }}
+        <span class="cross" @click="deleteSkill(skill)">&#x2716;</span>
+      </p>
+    </div>
 
     <div>
       <input type="checkbox" v-model="accept">
@@ -73,7 +78,13 @@ export default {
         this.skills.push(this.skill);
         this.skill = "";
       }
-    }
+    },
+
+    deleteSkill(skill) {
+      this.skills = this.skills.filter((loopSkill) => {
+        return loopSkill != skill;
+      });
+    },
   }
 }
 </script>
@@ -114,5 +125,10 @@ input[type="checkbox"]{
   margin: 0 10px 0 0;
   position: relative;
   top: 2px;
+}
+
+.cross{
+  cursor: pointer;
+  color: red;
 }
 </style>
