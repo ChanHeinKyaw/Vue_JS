@@ -1,8 +1,15 @@
 <template>
-    <router-link :to="{name: 'detail', params: {id: post.id}}">
-        <h3>{{post.title}}</h3>
-    </router-link>
-    <p>{{cutPostBody}}</p>
+    <div class="main">
+        <div class="card">
+            <router-link :to="{name: 'detail', params: {id: post.id}}">
+            <h3>{{post.title}}</h3>
+            </router-link>
+            <p>{{cutPostBody}}</p>
+            <span v-for="tag in post.tags" :key="tag" class="pill">
+                {{ tag }}
+            </span>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -20,3 +27,19 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .card{
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 45%;
+    }
+    
+    .main{
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+</style>
