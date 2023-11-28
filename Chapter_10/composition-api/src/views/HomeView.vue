@@ -1,29 +1,23 @@
 <template>
   <div class="home">
-    <input type="text" v-model="search">
-    <p>Search Value - {{search}}</p>
-    <div v-for="name in filterValues" :key="name">
-      <p>Person Name - {{name}}</p>
-    </div>
+    <h1>Post Lists</h1>
+    <PostList :posts="posts"></PostList>
   </div>
 </template>
 
 <script>
-import { computed, ref } from 'vue';
+import PostList from '../components/PostList'
+import { ref } from 'vue';
 export default {
+  components: { PostList },
   setup(){
-    let search = ref("");
-    let names = ref(["aungaung","kyawkyaw","mgmg","susu"]);
+    let posts = ref([
+      {title: "post title one", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", id: 1},
+      {title: "post title two", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", id: 2}
+    ])
 
-    let filterValues = computed(() => {
-      return names.value.filter(name => {
-        return name.includes(search.value);
-      });
-    })
     return {
-      names,
-      search,
-      filterValues
+      posts
     }
   }
 }
