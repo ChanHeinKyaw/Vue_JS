@@ -1,28 +1,38 @@
 {
-    "posts": [
-        {
-            "title": "post title 1",
-            "id": 1,
-            "body": "lorem ipsum"
-        },
-        {
-            "title": "post title 2",
-            "id": 2,
-            "body": "lorem ipsum"
-        },
-        {
-            "title": "post title 3",
-            "id": 3,
-            "body": "lorem ipsum"
-        },
-        {
-            "title": "post title 3",
-            "body": "lorem ipsumlorem ipsumlorem ipsumlorem ipsum",
-            "tags": [
-                "HTML",
-                "CSS"
-            ],
-            "id": 4
-        }
-    ]
+  "posts": [
+    {
+      "title": "post title 1",
+      "id": 1,
+      "body": "lorem ipsum"
+    },
+    {
+      "title": "post title 2",
+      "id": 2,
+      "body": "lorem ipsum"
+    },
+    {
+      "title": "post title 3",
+      "id": 3,
+      "body": "lorem ipsum"
+    },
+    {
+      "title": "post title 3",
+      "body": "lorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 4
+    },
+    {
+      "title": "post title 2",
+      "body": "Lorem Lorem Lorem",
+      "tags": [
+        "PHP",
+        "Java",
+        "Node"
+      ],
+      "id": 5
+    }
+  ]
 }
