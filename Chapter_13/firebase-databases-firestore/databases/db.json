@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "title": "post title 1",
+      "tags": [
+        "Java",
+        "Node"
+      ],
+      "id": 1,
+      "body": "lorem ipsum"
+    },
+    {
+      "title": "post title 2",
+      "tags": [
+        "PHP",
+        "Vue.js"
+      ],
+      "id": 2,
+      "body": "lorem ipsum"
+    },
+    {
+      "title": "post title 3",
+      "tags": [
+        "HTML",
+        "Vue.js"
+      ],
+      "id": 3,
+      "body": "lorem ipsum"
+    },
+    {
+      "title": "post title 3",
+      "body": "lorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 4
+    },
+    {
+      "title": "post title 2",
+      "body": "Lorem Lorem Lorem",
+      "tags": [
+        "PHP",
+        "Java",
+        "Node"
+      ],
+      "id": 5
+    }
+  ]
+}
