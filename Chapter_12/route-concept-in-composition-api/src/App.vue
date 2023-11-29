@@ -18,10 +18,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 nav a {
