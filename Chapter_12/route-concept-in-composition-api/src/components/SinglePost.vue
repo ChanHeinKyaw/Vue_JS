@@ -36,12 +36,9 @@ export default {
         padding: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
-        width: 45%;
     }
     
     .main{
-        display: flex;
-        justify-content: center;
         text-align: left;
     }
 </style>
