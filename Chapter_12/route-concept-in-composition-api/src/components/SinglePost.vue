@@ -5,9 +5,11 @@
             <h3>{{post.title}}</h3>
             </router-link>
             <p>{{cutPostBody}}</p>
-            <span v-for="tag in post.tags" :key="tag" class="pill">
-                {{ tag }}
-            </span>
+                <span v-for="tag in post.tags" :key="tag" class="pill">
+                    <router-link :to="{name: 'tag', params: {tag}}">
+                        {{ tag }}
+                    </router-link>
+                </span>
         </div>
     </div>
 </template>
