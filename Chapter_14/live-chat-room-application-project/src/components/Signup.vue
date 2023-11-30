@@ -23,6 +23,7 @@ export default {
                 if(!res){
                     throw new Error("counld not create new user")
                 }
+                res.user.updateProfile({displayName: displayName.value});
             }catch(error){
                 error.value = error.message;
                 console.log(error.value);
