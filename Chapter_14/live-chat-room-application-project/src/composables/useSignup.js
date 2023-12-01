@@ -10,15 +10,15 @@ let createAccount = async (email,password,displayName) => {
         if(!res){
             throw new Error("counld not create new user")
         }
-        res.user.updateProfile({displayName: displayName});
-    }catch(error){
-        error.value = error.message;
-        console.log(error.value);
+        res.user.updateProfile({displayName});
+        return res;
+    }catch(err){
+        error.value = err.message;
     }
 }
 
 let useSignup = () => {
-    return {error, createAccount}
+    return { error, createAccount }
 }
 
 export default useSignup;
